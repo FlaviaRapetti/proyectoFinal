@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flyerEncabezado {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap; /* Updated flex-flow property */
+  background-image: url(img/hidro.jpg);
+  background-size: cover;
+}
+
+.logo {
+  flex: 0 0 30%; /* Updated width using flex property */
+  height: 100%;
+  background-image: url(img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain; /* Added background-size property */
+}
+
+.titulo {
+  flex: 0 0 70%; /* Updated width using flex property */
+  height: 100%;
+  text-align: center;
+}
+
+.contenidoUno {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textoUno {
+  width: 100%;
+  height: 50%;
+  background-color: aqua;
+}
+
+.fotoUno {
+  width: 100%;
+  height: 50%;
+  background-image: url(img/lago.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenidoDos {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fotoDos {
+  width: 100%;
+  height: 50%;
+  background-image: url(img/pileta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textoDos {
+  width: 100%;
+  height: 50%;
+  background-color: aqua;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (min-width: 768px) {
+  .contenidoUno,
+  .contenidoDos {
+    flex-direction: row;
+  }
+  .textoUno,
+  .textoDos,
+  .fotoUno,
+  .fotoDos {
+    width: 50%;
+    height: 100%;
+  }
+}
+.contenidoTres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espacio entre elementos */
+}
+
+.elementoUno,
+.elementoDos,
+.elementoTres,
+.elementoCuatro,
+.elementoCinco,
+.elementoSeis {
+  width: calc(33.33% - 10px); /* Ancho de cada elemento */
+  height: 400px; /* Altura de cada elemento */
+  margin-bottom: 20px; /* Espacio inferior entre elementos */
+}
+
+.elementoUno {
+  background-color: red;
+}
+
+.elementoDos {
+  background-color: blue;
+}
+
+.elementoTres {
+  background-color: green;
+}
+
+.elementoCuatro {
+  background-color: orange;
+}
+
+.elementoCinco {
+  background-color: yellow;
+}
+
+.elementoSeis {
+  background-color: purple;
+}
+
+/* Media Query para pantallas grandes */
+@media (max-width: 768px) {
+  .elementoUno,
+  .elementoDos,
+  .elementoTres,
+  .elementoCuatro,
+  .elementoCinco,
+  .elementoSeis {
+    width: calc(50% - 10px); /* Ancho de cada elemento en pantallas grandes */
+    height: 150px; /* Altura de cada elemento en pantallas grandes */
+  }
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 480px) {
+  .elementoUno,
+  .elementoDos,
+  .elementoTres,
+  .elementoCuatro,
+  .elementoCinco,
+  .elementoSeis {
+    width: 100%; /* Ancho de cada elemento en pantallas pequeñas */
+    height: 100px; /* Altura de cada elemento en pantallas pequeñas */
+  }
+}
+
+/*# sourceMappingURL=estilos.csss.map */
